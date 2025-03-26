@@ -1,26 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Order & Expense Tracker
+Overview
+This is a full-stack web application built with Next.js 15, TypeScript, and Tailwind CSS. It allows users to manage order issues and track expenses, featuring drag-and-drop functionality for an enhanced user experience.
 
-## Getting Started
+This project follows best practices in folder structure and state management using Redux Toolkit. Authentication will be added in the future.
 
-First, run the development server:
+Features
+✅ Order Management: Track and manage order issues in real time.
+✅ Expense Tracker: Log and categorize expenses efficiently.
+✅ Drag-and-Drop: Interactive drag-and-drop functionality for better UX.
+✅ State Management: Global state handling with Redux Toolkit.
+✅ Dynamic UI: Built with Tailwind CSS and ShadCN for a modern design.
+✅ Form Handling & Validation: Formik + Yup integration.
+✅ Charts & Insights: Visualize expense and order data with Chart.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📦 project-root
+├── 📂 app
+│   ├── 📜 page.tsx
+│   ├── 📜 layout.tsx
+│   ├── 📜 global.css
+│   ├── 📂 (pages)
+│   │   ├── 📂 expenseTracker
+│   │   │   ├── 📜 page.tsx
+│   │   ├── 📂 orders
+│   │   │   ├── 📜 page.tsx
+│   │   │   ├── 📂 [id]
+│   │   │   │   ├── 📜 page.tsx
+│   │   ├── 📂 statistics
+│   │   │   ├── 📜 page.tsx
+├── 📂 components
+│   ├── 📂 Theme
+│   ├── 📂 Sidebar
+│   ├── 📂 MyComponent
+│   ├── 📂 Expense
+│   ├── 📂 Orders
+│   ├── 📂 UI (ShadCN components)
+├── 📂 lib
+│   ├── 📜 hooks.ts
+│   ├── 📜 types.ts
+│   ├── 📜 utils.ts
+├── 📂 Redux
+│   ├── 📂 slices
+│   ├── 📜 store.ts
+│   ├── 📜 storeProvider.tsx
 
-Hello there, I started this mini project with installing Nextjs, shadcn, redux, redux-toolkit, toastify, axios and lucid-reacte 
-1. Created the folder structure for Redux to manage the state inside it 
-2. created lib/utils for small utils functions
-3. inside component there will be my own components (sidebar and ordersTable) and inside ui will be the shadcn components
-4. i used at the start json-server to mock the data untill i achived the desired goals regarding the task
-5. when trying to deploy it on vercel with json-server would take alot of time so i used mockapi to deploy it faster
-6. changed some settings and configration on vercel.com to deploy it succsesfuly 
-7. created both pages for /orders which will take you to the orders table
-8. created single order page which you can navigate to from the table or manually with /order/#
-9. responsive side bar with toggle options and 2 navigation links one to the dashboard and the second to the orders table page
+Create a .env.local file in the root directory and add:
+NEXT_PUBLIC_MAIN_URL=https://67d8653300348dd3e2a75668.mockapi.io/Expenses
+
+Install with npm install/npm i or yarn
+run the app with npm run dev or yarn 
