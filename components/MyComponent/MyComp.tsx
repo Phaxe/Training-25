@@ -17,7 +17,7 @@ const MyComp: React.FC = () => {
       <div className="flex itemc justify-center gap-5 mt-2">
         <Button asChild className="">
           <Link
-            href="https://github.com/Phaxe/CrudJoy"
+            href="https://github.com/Phaxe/Training-25"
             target="_blank"
             rel="noopener noreferrer"
             className="flex "
